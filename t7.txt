@@ -1,1 +1,4 @@
-"sir"
+git config --global user.email "mhbappi05@gmail.com"
+git config --global user.name "mhbappi05"
+
+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
