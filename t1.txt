@@ -1,0 +1,290 @@
+Microsoft Windows [Version 10.0.26100.4946]
+(c) Microsoft Corporation. All rights reserved.
+
+E:\SWE LAB GIT CLASS>. code
+'.' is not recognized as an internal or external command,
+operable program or batch file.
+
+E:\SWE LAB GIT CLASS>.code
+'.code' is not recognized as an internal or external command,
+operable program or batch file.
+
+E:\SWE LAB GIT CLASS>code .
+
+E:\SWE LAB GIT CLASS>git init
+Initialized empty Git repository in E:/SWE LAB GIT CLASS/.git/
+
+E:\SWE LAB GIT CLASS>git status
+On branch main
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        t1.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+E:\SWE LAB GIT CLASS>git add t1.txt
+
+E:\SWE LAB GIT CLASS>git status
+On branch main
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   t1.txt
+
+
+E:\SWE LAB GIT CLASS>echo "ab">>t2.txt
+
+E:\SWE LAB GIT CLASS>git status
+On branch main
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   t1.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        t2.txt
+
+
+E:\SWE LAB GIT CLASS>git add t2.txt
+
+E:\SWE LAB GIT CLASS>git status
+On branch main
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   t1.txt
+        new file:   t2.txt
+
+
+E:\SWE LAB GIT CLASS>git rm --cached t2.txt
+rm 't2.txt'
+
+E:\SWE LAB GIT CLASS>git status
+On branch main
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   t1.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        t2.txt
+
+
+E:\SWE LAB GIT CLASS>git commit -m "added t1.txt"
+Author identity unknown
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got 'Student@Lab326-Pc-31.(none)')
+
+E:\SWE LAB GIT CLASS>git config --global user.email "mhbappi05@gmail.com"
+
+E:\SWE LAB GIT CLASS>  git config --global user.name "mhbappi05"
+
+E:\SWE LAB GIT CLASS>git commit -m "added t1.txt"
+[main (root-commit) 99e7e5c] added t1.txt
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 t1.txt
+
+E:\SWE LAB GIT CLASS>git log --oneline --graph --decorate --all
+* 99e7e5c (HEAD -> main) added t1.txt
+
+E:\SWE LAB GIT CLASS>git status
+On branch main
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        t2.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+E:\SWE LAB GIT CLASS>git status
+On branch main
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   t1.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        t2.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+E:\SWE LAB GIT CLASS>git restore t1.txt
+
+E:\SWE LAB GIT CLASS>git remote add origin https://github.com/mhbappi05/uiu_git_01.git
+
+E:\SWE LAB GIT CLASS>git push origin main
+remote: Write access to repository not granted.
+fatal: unable to access 'https://github.com/mhbappi05/uiu_git_01.git/': The requested URL returned error: 403
+
+E:\SWE LAB GIT CLASS>git remote add origin https://github.com/mhbappi05/uiu_git_01.git
+error: remote origin already exists.
+
+E:\SWE LAB GIT CLASS>git push origin main
+remote: Write access to repository not granted.
+fatal: unable to access 'https://github.com/mhbappi05/uiu_git_01.git/': The requested URL returned error: 403
+
+E:\SWE LAB GIT CLASS>git push -f -u origin main
+remote: Write access to repository not granted.
+fatal: unable to access 'https://github.com/mhbappi05/uiu_git_01.git/': The requested URL returned error: 403
+
+E:\SWE LAB GIT CLASS>git push origin main
+remote: Permission to mhbappi05/uiu_git_01.git denied to mhbappi05.
+fatal: unable to access 'https://github.com/mhbappi05/uiu_git_01.git/': The requested URL returned error: 403
+
+E:\SWE LAB GIT CLASS>git branch
+* main
+
+E:\SWE LAB GIT CLASS>git push -f -u origin main
+remote: Permission to mhbappi05/uiu_git_01.git denied to mhbappi05.
+fatal: unable to access 'https://github.com/mhbappi05/uiu_git_01.git/': The requested URL returned error: 403
+
+E:\SWE LAB GIT CLASS>git push origin main
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 205 bytes | 205.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/mhbappi05/uiu_git_01.git
+ * [new branch]      main -> main
+
+E:\SWE LAB GIT CLASS>git branch
+* main
+
+E:\SWE LAB GIT CLASS>git brach Shariff_boss
+git: 'brach' is not a git command. See 'git --help'.
+
+The most similar command is
+        branch
+
+E:\SWE LAB GIT CLASS>git branch --list
+* main
+
+E:\SWE LAB GIT CLASS>git branch frontend
+
+E:\SWE LAB GIT CLASS>git branch
+  frontend
+* main
+
+E:\SWE LAB GIT CLASS>git checkout frontend
+Switched to branch 'frontend'
+
+E:\SWE LAB GIT CLASS>git status
+On branch frontend
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        t2.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+E:\SWE LAB GIT CLASS>echo "sir">>t7.txt
+
+E:\SWE LAB GIT CLASS>git add t7.txt
+
+E:\SWE LAB GIT CLASS>git status
+On branch frontend
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   t7.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        t2.txt
+
+
+E:\SWE LAB GIT CLASS>git commit -m "added t7.txt"
+[frontend 437f84f] added t7.txt
+ 1 file changed, 1 insertion(+)
+ create mode 100644 t7.txt
+
+E:\SWE LAB GIT CLASS>git status
+On branch frontend
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        t2.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+E:\SWE LAB GIT CLASS>git checkout main
+Switched to branch 'main'
+
+E:\SWE LAB GIT CLASS>git merge frontend
+Updating 99e7e5c..437f84f
+Fast-forward
+ t7.txt | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 t7.txt
+
+E:\SWE LAB GIT CLASS>git log --oneline --graph --decorate --all
+* 437f84f (HEAD -> main, frontend) added t7.txt
+* 99e7e5c (origin/main) added t1.txt
+
+E:\SWE LAB GIT CLASS>git push origin main
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 268 bytes | 268.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/mhbappi05/uiu_git_01.git
+   99e7e5c..437f84f  main -> main
+
+E:\SWE LAB GIT CLASS>git branch backend
+
+E:\SWE LAB GIT CLASS>git checkout backend
+Switched to branch 'backend'
+
+E:\SWE LAB GIT CLASS>echo "pandas">>index.html
+
+E:\SWE LAB GIT CLASS>git status
+On branch backend
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        index.html
+        t2.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+E:\SWE LAB GIT CLASS>git add index.html
+
+E:\SWE LAB GIT CLASS>git commit -m "index added"
+[backend 50d9c40] index added
+ 1 file changed, 1 insertion(+)
+ create mode 100644 index.html
+
+E:\SWE LAB GIT CLASS>git push origin backend
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 303 bytes | 303.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+remote:
+remote: Create a pull request for 'backend' on GitHub by visiting:
+remote:      https://github.com/mhbappi05/uiu_git_01/pull/new/backend
+remote:
+To https://github.com/mhbappi05/uiu_git_01.git
+ * [new branch]      backend -> backend
+
+E:\SWE LAB GIT CLASS>
